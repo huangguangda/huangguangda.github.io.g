@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>达达前端小酒馆</title>
   
-  
+  <subtitle>前端小酒馆</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huangguangda.cn/"/>
@@ -10,7 +10,7 @@
   <id>https://huangguangda.cn/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>Jeskson</name>
     
   </author>
   
@@ -18,9 +18,9 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://huangguangda.cn/2019/11/19/hello-world/"/>
-    <id>https://huangguangda.cn/2019/11/19/hello-world/</id>
-    <published>2019-11-19T02:28:55.143Z</published>
+    <link href="https://huangguangda.cn/2019/11/27/hello-world/"/>
+    <id>https://huangguangda.cn/2019/11/27/hello-world/</id>
+    <published>2019-11-27T12:41:04.109Z</published>
     <updated>2019-11-19T02:28:55.143Z</updated>
     
     <summary type="html">
@@ -36,6 +36,465 @@
     </summary>
     
     
+    
+  </entry>
+  
+  <entry>
+    <title>腾讯智慧校园开发平台</title>
+    <link href="https://huangguangda.cn/2018/10/19/1/"/>
+    <id>https://huangguangda.cn/2018/10/19/1/</id>
+    <published>2018-10-19T01:42:25.000Z</published>
+    <updated>2018-10-19T01:43:27.027Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;腾讯智慧校园开发平台&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="腾讯智慧校园开发平台" scheme="https://huangguangda.cn/categories/%E8%85%BE%E8%AE%AF%E6%99%BA%E6%85%A7%E6%A0%A1%E5%9B%AD%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0/"/>
+    
+    
+      <category term="腾讯智慧校园开发平台" scheme="https://huangguangda.cn/tags/%E8%85%BE%E8%AE%AF%E6%99%BA%E6%85%A7%E6%A0%A1%E5%9B%AD%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>腾讯智慧校园开发平台1</title>
+    <link href="https://huangguangda.cn/2018/05/18/1/"/>
+    <id>https://huangguangda.cn/2018/05/18/1/</id>
+    <published>2018-05-18T07:12:23.000Z</published>
+    <updated>2018-10-19T07:27:44.490Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;腾讯智慧校园开发平台1&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="腾讯智慧校园开发平台" scheme="https://huangguangda.cn/categories/%E8%85%BE%E8%AE%AF%E6%99%BA%E6%85%A7%E6%A0%A1%E5%9B%AD%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0/"/>
+    
+    
+      <category term="腾讯智慧校园开发平台" scheme="https://huangguangda.cn/tags/%E8%85%BE%E8%AE%AF%E6%99%BA%E6%85%A7%E6%A0%A1%E5%9B%AD%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>教育系统APP(八)</title>
+    <link href="https://huangguangda.cn/2018/04/28/1/"/>
+    <id>https://huangguangda.cn/2018/04/28/1/</id>
+    <published>2018-04-28T07:52:36.000Z</published>
+    <updated>2019-01-23T11:59:06.298Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote class=&quot;blockquote-center&quot;&gt;用一切抱怨的时间去努力&lt;/blockquote&gt;
+
+&lt;img src=&quot;/images/35.jpg&quot; style=&quot;width: 100%;height: 100%&quot;&gt;
+    
+    </summary>
+    
+    
+      <category term="教育系统APP" scheme="https://huangguangda.cn/categories/%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9FAPP/"/>
+    
+    
+      <category term="教育系统APP" scheme="https://huangguangda.cn/tags/%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9FAPP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>教育系统APP(七)</title>
+    <link href="https://huangguangda.cn/2018/04/27/1/"/>
+    <id>https://huangguangda.cn/2018/04/27/1/</id>
+    <published>2018-04-27T08:15:53.000Z</published>
+    <updated>2019-01-23T11:59:21.562Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote class=&quot;blockquote-center&quot;&gt;用一切抱怨的时间去努力&lt;/blockquote&gt;
+## 回顾上一期任务
+
+&lt;img src=&quot;/images/33.jpg&quot; style=&quot;width: 100%;height: 100%&quot;&gt;
+
+&lt;p&gt;判断题数&lt;br&gt;点击完选项之后，底部的文本控件要变换刚刚点击的题目的题号。&lt;br&gt;注意：在里面用到adapter与Activity的信息回调，具体过程参考&lt;/p&gt;
+&lt;p&gt;保存答题状态&lt;br&gt;当5道题都回答过一遍后，点击返回习题界面，习题下的文本标签要变成“已完成”。&lt;/p&gt;
+&lt;h2 id=&quot;教育系统APP-七-的发布-福利&quot;&gt;&lt;a href=&quot;#教育系统APP-七-的发布-福利&quot; class=&quot;headerlink&quot; title=&quot;教育系统APP(七)的发布-福利&quot;&gt;&lt;/a&gt;教育系统APP(七)的发布-福利&lt;/h2&gt;
+    
+    </summary>
+    
+    
+      <category term="教育系统APP" scheme="https://huangguangda.cn/categories/%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9FAPP/"/>
+    
+    
+      <category term="教育系统APP" scheme="https://huangguangda.cn/tags/%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9FAPP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>教育系统APP(六)</title>
+    <link href="https://huangguangda.cn/2018/04/26/1/"/>
+    <id>https://huangguangda.cn/2018/04/26/1/</id>
+    <published>2018-04-26T04:39:55.000Z</published>
+    <updated>2019-01-23T11:59:17.022Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote class=&quot;blockquote-center&quot;&gt;用一切抱怨的时间去努力&lt;/blockquote&gt;
+## 回顾上一期任务
+
+&lt;p&gt;&lt;img src=&quot;/images/25.jpg&quot; alt=&quot;25&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;任务实施&quot;&gt;&lt;a href=&quot;#任务实施&quot; class=&quot;headerlink&quot; title=&quot;任务实施&quot;&gt;&lt;/a&gt;任务实施&lt;/h2&gt;&lt;p&gt;个人资料加上QQ号属性&lt;br&gt;在个人资料下添加一个“QQ号”属性，初始状态文字显示“未添加”，点击进入修改页面，输入框的键盘类型只能为数字。&lt;br&gt;（提示：editText.setInputType(InputType.TYPE_CLASS_NUMBER) ）&lt;br&gt;输入框最多只能输入12位数字，点击保存后个人资料界面能正常显示保存后的结果。&lt;/p&gt;
+&lt;h2 id=&quot;教育系统APP-六-的发布&quot;&gt;&lt;a href=&quot;#教育系统APP-六-的发布&quot; class=&quot;headerlink&quot; title=&quot;教育系统APP(六)的发布&quot;&gt;&lt;/a&gt;教育系统APP(六)的发布&lt;/h2&gt;
+    
+    </summary>
+    
+    
+      <category term="教育系统APP" scheme="https://huangguangda.cn/categories/%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9FAPP/"/>
+    
+    
+      <category term="教育系统APP" scheme="https://huangguangda.cn/tags/%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9FAPP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>教育系统APP(五)</title>
+    <link href="https://huangguangda.cn/2018/04/25/1/"/>
+    <id>https://huangguangda.cn/2018/04/25/1/</id>
+    <published>2018-04-25T15:00:58.000Z</published>
+    <updated>2019-01-23T11:59:35.344Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote class=&quot;blockquote-center&quot;&gt;用一切抱怨的时间去努力&lt;/blockquote&gt;
+## 回顾上一期任务
+## 任务实施
+
+&lt;p&gt;修复fragment的小BUG&lt;br&gt;在未登录状态下，点击“点击登陆”，登陆完成后，应该显示“我”的界面，并且正常显示用户名。&lt;/p&gt;
+&lt;p&gt;在登陆状态下，点击“设置”-&amp;gt;点击退出登录，应该继续显示“我”的界面，并且正常显示用户名。&lt;/p&gt;
+&lt;p&gt;修改密保设置页面&lt;br&gt;密保设置页面的按钮显示的是“验证”，这里应该是“设置”比较合理。&lt;br&gt;把按钮上的文字改成“设置”，要求修改密码界面按钮依然是“验证”。&lt;/p&gt;
+&lt;p&gt;优化找回密码&lt;br&gt;登陆界面的找回密码功能用的是初始化密码，要求改成设置新密码。&lt;br&gt;注意：显示设置新密码框时，按钮的文字也要变化哦！&lt;/p&gt;
+&lt;h2 id=&quot;教育系统APP-五-的发布&quot;&gt;&lt;a href=&quot;#教育系统APP-五-的发布&quot; class=&quot;headerlink&quot; title=&quot;教育系统APP(五)的发布&quot;&gt;&lt;/a&gt;教育系统APP(五)的发布&lt;/h2&gt;
+    
+    </summary>
+    
+    
+      <category term="教育系统APP" scheme="https://huangguangda.cn/categories/%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9FAPP/"/>
+    
+    
+      <category term="教育系统APP" scheme="https://huangguangda.cn/tags/%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9FAPP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>教育系统APP(四)</title>
+    <link href="https://huangguangda.cn/2018/04/24/1/"/>
+    <id>https://huangguangda.cn/2018/04/24/1/</id>
+    <published>2018-04-23T16:22:34.000Z</published>
+    <updated>2019-11-27T13:17:05.789Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;“我”的模块&quot;&gt;&lt;a href=&quot;#“我”的模块&quot; class=&quot;headerlink&quot; title=&quot;“我”的模块&quot;&gt;&lt;/a&gt;“我”的模块&lt;/h2&gt;&lt;p&gt;掌握修改密码功能的开发，实现用户密码的修改&lt;br&gt;掌握设置密保功能的开发，并且通过密保可以找回用户密码&lt;/p&gt;
+&lt;h2 id=&quot;挑战任务&quot;&gt;&lt;a href=&quot;#挑战任务&quot; class=&quot;headerlink&quot; title=&quot;挑战任务&quot;&gt;&lt;/a&gt;挑战任务&lt;/h2&gt;&lt;p&gt;初次打开页面都是Fragment_1，请修改相关代码，让初始打开的页面为Fragment_3，别忘了底部导航栏也要变颜色哦&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/18.jpg&quot; alt=&quot;18&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="教育系统APP" scheme="https://huangguangda.cn/categories/%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9FAPP/"/>
+    
+    
+      <category term="教育系统APP" scheme="https://huangguangda.cn/tags/%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9FAPP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>教育系统APP(三)</title>
+    <link href="https://huangguangda.cn/2018/04/23/1/"/>
+    <id>https://huangguangda.cn/2018/04/23/1/</id>
+    <published>2018-04-23T12:21:03.000Z</published>
+    <updated>2019-11-27T13:17:12.888Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;挑战任务&quot;&gt;&lt;a href=&quot;#挑战任务&quot; class=&quot;headerlink&quot; title=&quot;挑战任务&quot;&gt;&lt;/a&gt;挑战任务&lt;/h2&gt;&lt;p&gt;回顾教育系统APP(二)以及教育系统APP(三)&lt;/p&gt;
+&lt;p&gt;检验登录和注册模块。&lt;br&gt;请修改MainActivity和LoginActivity，欢迎界面调转入主界面后，自动跳转入登录界面，登录成功后，返回主界面，在主界面的Hello World位置显示：用户名+“登录成功”。&lt;/p&gt;
+&lt;p&gt;解决方法&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/12.jpg&quot; alt=&quot;12&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="教育系统APP" scheme="https://huangguangda.cn/categories/%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9FAPP/"/>
+    
+    
+      <category term="教育系统APP" scheme="https://huangguangda.cn/tags/%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9FAPP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>教育系统APP(二)</title>
+    <link href="https://huangguangda.cn/2018/04/22/1/"/>
+    <id>https://huangguangda.cn/2018/04/22/1/</id>
+    <published>2018-04-22T14:23:59.000Z</published>
+    <updated>2019-11-27T13:18:17.558Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;注册与登录界面&quot;&gt;&lt;a href=&quot;#注册与登录界面&quot; class=&quot;headerlink&quot; title=&quot;注册与登录界面&quot;&gt;&lt;/a&gt;注册与登录界面&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;设计思路&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;当我们面临制作登录和注册功能的实现时，我们需要先设计登录界面的布局和注册界面的布局，做到有完整的思路时才开始实现其功能效果会更好。&lt;/p&gt;
+&lt;p&gt;我们需要做个标题栏，登陆界面，实现登陆界面的功能代码块，注册界面，实现测试界面的功能模块即可完成。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/6.jpg&quot; alt=&quot;6&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="教育系统APP" scheme="https://huangguangda.cn/categories/%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9FAPP/"/>
+    
+    
+      <category term="教育系统APP" scheme="https://huangguangda.cn/tags/%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9FAPP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>教育系统APP(一)</title>
+    <link href="https://huangguangda.cn/2018/04/21/1/"/>
+    <id>https://huangguangda.cn/2018/04/21/1/</id>
+    <published>2018-04-21T05:16:17.000Z</published>
+    <updated>2019-11-27T13:16:13.344Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;AndroidStudio制作欢迎界面与应用图标-amp-Android-如何显示版本号并制作3秒跳转页&quot;&gt;&lt;a href=&quot;#AndroidStudio制作欢迎界面与应用图标-amp-Android-如何显示版本号并制作3秒跳转页&quot; class=&quot;headerlink&quot; title=&quot;AndroidStudio制作欢迎界面与应用图标 &amp;amp; Android-如何显示版本号并制作3秒跳转页&quot;&gt;&lt;/a&gt;AndroidStudio制作欢迎界面与应用图标 &amp;amp; Android-如何显示版本号并制作3秒跳转页&lt;/h2&gt;&lt;p&gt;本项目使用Android Studio 3.0.1作为开发工具，完成第一个任务。今天做点击APP，进入欢迎界面，三秒后跳转主页，显示Helloworld，即可大功告成。点击APP的应用图标需要更换，不许使用系统默认图标。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="教育系统APP" scheme="https://huangguangda.cn/categories/%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9FAPP/"/>
+    
+    
+      <category term="教育系统APP" scheme="https://huangguangda.cn/tags/%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9FAPP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android开发工程师文集-Android知识点讲解</title>
+    <link href="https://huangguangda.cn/2018/04/18/1/"/>
+    <id>https://huangguangda.cn/2018/04/18/1/</id>
+    <published>2018-04-18T14:36:50.000Z</published>
+    <updated>2019-11-27T13:21:23.205Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;Android开发工程师文集-Android知识点讲解-记录美好生活&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Android开发工程师文集" scheme="https://huangguangda.cn/categories/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%96%87%E9%9B%86/"/>
+    
+    
+      <category term="Android开发工程师文集" scheme="https://huangguangda.cn/tags/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%96%87%E9%9B%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android开发工程师文集-Activity生命周期，启动方式，Intent相关介绍，Activity详细讲解</title>
+    <link href="https://huangguangda.cn/2018/04/11/1/"/>
+    <id>https://huangguangda.cn/2018/04/11/1/</id>
+    <published>2018-04-11T07:10:35.000Z</published>
+    <updated>2019-11-27T13:21:44.151Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;作为一个Activity，就是一个界面，当我们在手机上打开一个APP时，你看到的页面就是基于Activity生成的。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Android开发工程师文集" scheme="https://huangguangda.cn/categories/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%96%87%E9%9B%86/"/>
+    
+    
+      <category term="Android开发工程师文集" scheme="https://huangguangda.cn/tags/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%96%87%E9%9B%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android开发工程师文集-1小时学会Widget小组件开发</title>
+    <link href="https://huangguangda.cn/2018/04/10/1/"/>
+    <id>https://huangguangda.cn/2018/04/10/1/</id>
+    <published>2018-04-10T02:12:07.000Z</published>
+    <updated>2019-11-27T13:22:13.621Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Web Widget,中文译名被称作是微件,是一小块可以在任意一个基于HTML的Web页面上执行的代码，它的表现形式可能是视频，地图，新闻，小游戏等等。它的根本思想来源于代码复用，通常情况下，Widget的代码形式包含了DHTML,JavaScript以及Adobe Flash。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Android开发工程师文集" scheme="https://huangguangda.cn/categories/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%96%87%E9%9B%86/"/>
+    
+    
+      <category term="Android开发工程师文集" scheme="https://huangguangda.cn/tags/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%96%87%E9%9B%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AndroidStudio制作“我”的界面，设置，修改密码，设置密保和找回密码</title>
+    <link href="https://huangguangda.cn/2018/04/07/1/"/>
+    <id>https://huangguangda.cn/2018/04/07/1/</id>
+    <published>2018-04-07T11:19:48.000Z</published>
+    <updated>2019-11-27T13:25:51.788Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;学习目标&quot;&gt;&lt;a href=&quot;#学习目标&quot; class=&quot;headerlink&quot; title=&quot;学习目标&quot;&gt;&lt;/a&gt;学习目标&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;掌握修改密码功能的开发，和实现用户密码的修改；&lt;/li&gt;
+&lt;li&gt;掌握设置密保的功能开发，通过密保我们可以找回用户的密码，来保证用户的安全。&lt;/li&gt;
+&lt;li&gt;具体布局将不在展示，只说明一些功能模块的实现。&lt;/li&gt;&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="Android Studio实战练习V2" scheme="https://huangguangda.cn/categories/Android-Studio%E5%AE%9E%E6%88%98%E7%BB%83%E4%B9%A0V2/"/>
+    
+    
+      <category term="Android Studio实战练习V2" scheme="https://huangguangda.cn/tags/Android-Studio%E5%AE%9E%E6%88%98%E7%BB%83%E4%B9%A0V2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android开发工程师文集-layout_weight讲解</title>
+    <link href="https://huangguangda.cn/2018/04/04/1/"/>
+    <id>https://huangguangda.cn/2018/04/04/1/</id>
+    <published>2018-04-04T07:14:11.000Z</published>
+    <updated>2019-11-27T13:21:08.092Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;LinearLayout中的layout_weight属性，先分配控件的尺寸，再分配weight的，如果给控件设置文本信息，那么如果该控件宽度为 &lt;code&gt;wrap_content&lt;/code&gt;, 就先排这个文本信息，然后再按weight分配。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Android开发工程师文集" scheme="https://huangguangda.cn/categories/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%96%87%E9%9B%86/"/>
+    
+    
+      <category term="Android开发工程师文集" scheme="https://huangguangda.cn/tags/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%96%87%E9%9B%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android开发工程师文集-相关控件的讲解，五大布局</title>
+    <link href="https://huangguangda.cn/2018/04/03/1/"/>
+    <id>https://huangguangda.cn/2018/04/03/1/</id>
+    <published>2018-04-03T13:09:58.000Z</published>
+    <updated>2019-11-27T13:19:50.399Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;TextView &lt;/li&gt;
+&lt;li&gt;EditText &lt;/li&gt;
+&lt;li&gt;AutoCompleteTextView为控件自动显示输入文本时出现的提示信息。&lt;/li&gt;
+&lt;li&gt;MultiAutoCompleteTextView&lt;/li&gt;
+&lt;li&gt;ToggleButton&lt;/li&gt;
+&lt;li&gt;Intent跳转&lt;/li&gt;
+&lt;li&gt;四大组件&lt;/li&gt;
+&lt;li&gt;CheckBox与RadioButton&lt;/li&gt;
+&lt;li&gt;五大布局&lt;/li&gt;&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="Android开发工程师文集" scheme="https://huangguangda.cn/categories/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%96%87%E9%9B%86/"/>
+    
+    
+      <category term="Android开发工程师文集" scheme="https://huangguangda.cn/tags/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%96%87%E9%9B%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android开发工程师文集-1 小时学会各种Drawable</title>
+    <link href="https://huangguangda.cn/2018/03/17/1/"/>
+    <id>https://huangguangda.cn/2018/03/17/1/</id>
+    <published>2018-03-17T07:01:46.000Z</published>
+    <updated>2019-11-27T13:21:59.394Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;h2 id=&quot;Drawable介绍&quot;&gt;&lt;a href=&quot;#Drawable介绍&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Android开发工程师文集" scheme="https://huangguangda.cn/categories/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%96%87%E9%9B%86/"/>
+    
+    
+      <category term="Android开发工程师文集" scheme="https://huangguangda.cn/tags/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%96%87%E9%9B%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android开发工程师文集-1 小时学会SQLite</title>
+    <link href="https://huangguangda.cn/2018/03/16/1/"/>
+    <id>https://huangguangda.cn/2018/03/16/1/</id>
+    <published>2018-03-16T07:03:52.000Z</published>
+    <updated>2019-11-27T13:22:26.003Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;h2 id=&quot;内容&quot;&gt;&lt;a href=&quot;#内容&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Android开发工程师文集" scheme="https://huangguangda.cn/categories/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%96%87%E9%9B%86/"/>
+    
+    
+      <category term="Android开发工程师文集" scheme="https://huangguangda.cn/tags/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%96%87%E9%9B%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android开发的插件Code Generator与LayoutCreator的安装与使用,提升你的开发效率</title>
+    <link href="https://huangguangda.cn/2018/03/15/1/"/>
+    <id>https://huangguangda.cn/2018/03/15/1/</id>
+    <published>2018-03-15T07:13:35.000Z</published>
+    <updated>2019-11-27T13:23:39.969Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;大家好，今天给大家带来&lt;code&gt;Android开发的插件Code
+        
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="https://huangguangda.cn/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="https://huangguangda.cn/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   

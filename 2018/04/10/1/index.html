@@ -2,10 +2,11 @@
 <html lang="zh-CN">
 
 
+
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hexo">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="Android开发工程师文集-1小时学会Widget小组件开发, 达达前端小酒馆">
+    <meta name="description" content="Web Widget,中文译名被称作是微件,是一小块可以在任意一个基于HTML的Web页面上执行的代码，它的表现形式可能是视频，地图，新闻，小游戏等等。它的根本思想来源于代码复用，通常情况下，Widget的代码形式包含了DHTML,Java">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hello World | Hexo</title>
+    <title>Android开发工程师文集-1小时学会Widget小组件开发 | 达达前端小酒馆</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -26,8 +27,12 @@
     
     <script src="/libs/jquery/jquery.min.js"></script>
     
-<link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+                                               
+ <script src="https://cdn.jsdelivr.net/gh/Yafine/cdn@2.0/source/js/click_show_text.js"></script>    
+ <script src="https://cdn.jsdelivr.net/gh/Yafine/cdn@1.7/js/yinghua.js"></script>   
+<link rel="alternate" href="/atom.xml" title="达达前端小酒馆" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -39,7 +44,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">达达前端小酒馆</span>
                 </a>
             </div>
             
@@ -124,6 +129,58 @@
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Medias</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/musics">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Musics</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Movies</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Books</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/galleries">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Galleries</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -137,10 +194,10 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">达达前端小酒馆</div>
         <div class="logo-desc">
             
-            Never really desperate, only the lost of the soul.
+            看过的书，听过的歌，去过的地方，遇到的故事，都分享给你，前端，PHP后端，全栈程序员，欢迎您来到小酒馆，品味人生酸甜苦辣，柴米油盐酱醋茶！
             
         </div>
     </div>
@@ -226,10 +283,65 @@
           
         </li>
         
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;" target="_blank" rel="noopener">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			Medias
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>   
+				
+                  <a href="/musics " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Musics</span>
+                  </a>
+                </li>
+              
+                <li>   
+				
+                  <a href="/movies " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Movies</span>
+                  </a>
+                </li>
+              
+                <li>   
+				
+                  <a href="/books " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Books</span>
+                  </a>
+                </li>
+              
+                <li>   
+				
+                  <a href="/galleries " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Galleries</span>
+                  </a>
+                </li>
+               
+            </ul>
+          
+        </li>
+        
         
         <li><div class="divider"></div></li>
         <li>
-            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+            <a href="https://github.com/huangguangda" class="waves-effect waves-light" target="_blank">
                 <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
@@ -285,7 +397,7 @@
     }
 </style>
 
-<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+<a href="https://github.com/huangguangda" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
    data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -301,16 +413,29 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Hello World
+                        Android开发工程师文集-1小时学会Widget小组件开发
                     </div>
                 </div>
             </div>
@@ -420,12 +545,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%96%87%E9%9B%86/">
+                                <span class="chip bg-color">Android开发工程师文集</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%96%87%E9%9B%86/" class="post-category">
+                                Android开发工程师文集
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -434,7 +572,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-11-19
+                    2018-04-10
                 </div>
                 
 
@@ -443,14 +581,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    549
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 				
@@ -466,16 +604,108 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+                <p>Web Widget,中文译名被称作是微件,是一小块可以在任意一个基于HTML的Web页面上执行的代码，它的表现形式可能是视频，地图，新闻，小游戏等等。它的根本思想来源于代码复用，通常情况下，Widget的代码形式包含了DHTML,JavaScript以及Adobe Flash。</p>
+<a id="more"></a>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="学会用Widget-小组件"><a href="#学会用Widget-小组件" class="headerlink" title="学会用Widget (小组件)"></a>学会用Widget (小组件)</h2><p>Widget小组件很方便，很快捷，可以个性化，自己定制，相关功能，可以实时更新最新内容。</p>
+<ul>
+<li>Widget布局，Widget配置，AppWidgetProvider与Configuration Activity</li>
+<li>Android Widget</li>
+<li>xml布局类型：AppWidget Provider<pre><code>&lt;appwidget-provider 
+xmlns:android="http://schemas.android.com/apk/res/android"
+//引用的布局文件
+android:initialLayout="@layout/widget"
+android:minHeight="50dp"
+android:minWidth="100dp"
+//设置更新时间
+android:updatePerioMillis="66666666"&gt;
+&lt;/appwidget-provide&gt;</code></pre><pre><code>public class WidgetProvider extends AppWidgetProvider {
+@Override
+public void onDeleted(Context context,int[] appWidgetIds){
+super.onDeleted(context,appWidgetIds);
+}
+@Override
+public void onDisabled(Context context){
+super.onDisabled(context);
+}
+@Override
+public void onEnabled(Context context){
+super.onEnabled(context);
+}
+@Override
+public void onReceive(Context context,Intent intent){
+super.onReceive(context,intent);
+}
+@Override
+public void onUpdate(Context context,AppWidgetManager appWidgetManager,int[] appWidgetIds){
+super.onUpdate(context,appWidgetManager,appWidgetIds);
+}
+}</code></pre><pre><code>//TimerService extends Service
+Timer timer=new Timer();
+timer.shedule(new TimerTask(){
+@Override
+public void run(){
+ updateTime();
+}
+},0,1000);
+}
+//onDestroy
+public void onDestroy(){
+super.onDestroy();
+timer=null;
+}
+//updateTime();
+private void updateTime(){
+String time = simpletime.format(new Date());
+}</code></pre>Widget就是个桌面小组件，有了Widget，我们可以直接在桌面上进行各种操作。</li>
+</ul>
+<h2 id="Widget使用"><a href="#Widget使用" class="headerlink" title="Widget使用"></a>Widget使用</h2><ul>
+<li>AndroidManifest中声明AppWidget</li>
+<li>xml中定义AppWidget配置文件</li>
+<li>layout中定义Widget布局文件</li>
+<li>创建类继承AppWidgetProvider类</li>
+</ul>
+<pre><code>//清单文件中
+&lt;meta-data
+   android:name="android.appwidget.provider"
+   android:resource="@layout/widget_setting"/&gt;</code></pre><pre><code>//onUpdate()重点
+@Override
+public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
+ super.onUpdate(context, appWidgetManager, appWidgetIds);
+ RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.layout_widget);
+ //Intent intent = new Intent();
+ Intent intent = new Intent();
+ intent.setClass(context, TestWidget.class); 
+ intent.setAction(WIDGET_BTN_ACTION);
+ PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
+ remoteViews.setOnClickPendingIntent(R.id.widget_btn, pendingIntent);
+ appWidgetManager.updateAppWidget(appWidgetIds, remoteViews); 
+} </code></pre><pre><code>//清单文件
+ &lt;intent-filter&gt;      
+   &lt;action android:name="android.appwidget.action.APPWIDGET_UPDATE" /&gt;      
+   &lt;/intent-filter&gt;      
+   &lt;meta-data android:name="android.appwidget.provider"      
+      android:resource="@xml/widget_provider"/&gt;      </code></pre><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>本文讲了Android开发工程师文集-1 小时学会Widget小组件开发，如果您还有更好地理解，欢迎沟通</li>
+</ul>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -490,7 +720,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://huangguangda.cn" rel="external nofollow noreferrer">John Doe</a>
+                    <a href="https://huangguangda.cn" rel="external nofollow noreferrer">Jeskson</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -500,7 +730,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://huangguangda.cn/2019/11/19/hello-world/">https://huangguangda.cn/2019/11/19/hello-world/</a>
+                    <a href="https://huangguangda.cn/2018/04/10/1/">https://huangguangda.cn/2018/04/10/1/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -513,7 +743,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="https://huangguangda.cn" target="_blank">John Doe</a>
+                    <a href="https://huangguangda.cn" target="_blank">Jeskson</a>
                     !
                 </span>
             </div>
@@ -537,7 +767,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%96%87%E9%9B%86/">
+                                    <span class="chip bg-color">Android开发工程师文集</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -687,6 +921,32 @@
     </div>
 
     
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '63f0a30af9ea69df5360',
+        clientSecret: '0fb0f4090d4958332a48ba4645023be529300b46',
+        repo: 'huangguangda.github.io',
+        owner: 'Jeskson',
+        admin: ["Jeskson"],
+        id: '2018-04-10T10-12-07',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
 
     
 
@@ -701,39 +961,51 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/11/19/hello-world/">
+                <a href="/2018/04/11/1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Android开发工程师文集-Activity生命周期，启动方式，Intent相关介绍，Activity详细讲解">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">Android开发工程师文集-Activity生命周期，启动方式，Intent相关介绍，Activity详细讲解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            作为一个Activity，就是一个界面，当我们在手机上打开一个APP时，你看到的页面就是基于Activity生成的。
+
+前言Activity是什么作为一个Activity，就是一个界面，当我们在手机上打开一个APP时，你看到的页面就是基于A
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-19
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2018-04-11
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            John Doe
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%96%87%E9%9B%86/" class="post-category">
+                                    Android开发工程师文集
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%96%87%E9%9B%86/">
+                        <span class="chip bg-color">Android开发工程师文集</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -741,37 +1013,52 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/11/19/hello-world/">
+                <a href="/2018/04/07/1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="AndroidStudio制作“我”的界面，设置，修改密码，设置密保和找回密码">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">AndroidStudio制作“我”的界面，设置，修改密码，设置密保和找回密码</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            学习目标
+掌握修改密码功能的开发，和实现用户密码的修改；
+掌握设置密保的功能开发，通过密保我们可以找回用户的密码，来保证用户的安全。
+具体布局将不在展示，只说明一些功能模块的实现。
+前言大家好，今天给大家带来AndroidStudio制作“
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2018-04-07
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            John Doe
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Android-Studio%E5%AE%9E%E6%88%98%E7%BB%83%E4%B9%A0V2/" class="post-category">
+                                    Android Studio实战练习V2
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Android-Studio%E5%AE%9E%E6%88%98%E7%BB%83%E4%B9%A0V2/">
+                        <span class="chip bg-color">Android Studio实战练习V2</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -781,6 +1068,43 @@
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 达达前端小酒馆<br />'
+            + '文章作者: Jeskson<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->
@@ -912,11 +1236,12 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year">年份</span>
-            <a href="https://huangguangda.cn" target="_blank">John Doe</a>
-            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
-            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <a href="https://huangguangda.cn" target="_blank">Jeskson</a>
+
             <br>
             
+            
+
             
             
             
@@ -933,6 +1258,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
                     class="white-color"></span>&nbsp;人
             </span>
             
+
             <br>
             
             <span id="sitetime">载入运行时间...</span>
@@ -945,7 +1271,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
                     var days = hours * 24;
                     var years = days * 365;
                     var today = new Date();
-                    var startYear = "2019";
+                    var startYear = "2015";
                     var startMonth = "6";
                     var startDate = "28";
                     var startHour = "0";
@@ -984,6 +1310,15 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/huangguangda" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2397923107@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
 
 
 
@@ -991,10 +1326,21 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 
 
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2397923107" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2397923107" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
 
 
 
+    <a href="https://weibo.com/u/5700875443" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/u/5700875443" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
 
+
+
+    <a href="https://www.zhihu.com/people/dashucoding/activities" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/dashucoding/activities" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
 
 
 
@@ -1008,6 +1354,25 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 <div class="progress-bar"></div>
 
+<script>
+    $(document).ready(function () {
+
+        var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+        var pvcountOffset = 80000;  // 初始化首次数据
+        var uvcountOffset = 20000;
+
+        function fixCount() {
+            if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
+                clearInterval(int);
+            }
+            if ($("#busuanzi_container_site_pv").css("display") != "none") {
+                $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
+                clearInterval(int); // 停止检测
+            }
+        }
+    });
+</script>
 
     <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
@@ -1041,6 +1406,23 @@ $(function () {
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
+    <script type="text/javascript">
+    var OriginTitile = document.title,
+        st;
+    document.addEventListener("visibilitychange", function () {
+        document.hidden ? (document.title = "看不见我🙈~看不见我🙈~", clearTimeout(st)) : (document.title =
+            "(๑•̀ㅂ•́) ✧被发现了～", st = setTimeout(function () {
+                document.title = OriginTitile
+            }, 3e3))
+    })
+    </script>
+
+    <!-- JesksonWeather -->
+    <script type="text/javascript">
+    WIDGET = {FID: 'IQ9YeEehN9'}
+    </script>
+    <script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
@@ -1085,6 +1467,7 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
+
 
 </body>
 

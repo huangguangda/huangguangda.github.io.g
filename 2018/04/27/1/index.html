@@ -1,0 +1,2861 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="教育系统APP(七), 达达前端小酒馆">
+    <meta name="description" content="用一切抱怨的时间去努力
+## 回顾上一期任务
+
+
+
+判断题数点击完选项之后，底部的文本控件要变换刚刚点击的题目的题号。注意：在里面用到adapter与Activity的信息回调，具体过程参考
+保存答题状态当5道题都回答过一遍后，点击返回习题">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>教育系统APP(七) | 达达前端小酒馆</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    
+    <script src="/libs/jquery/jquery.min.js"></script>
+    
+                                               
+ <script src="https://cdn.jsdelivr.net/gh/Yafine/cdn@2.0/source/js/click_show_text.js"></script>    
+ <script src="https://cdn.jsdelivr.net/gh/Yafine/cdn@1.7/js/yinghua.js"></script>   
+<link rel="alternate" href="/atom.xml" title="达达前端小酒馆" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper head-container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">达达前端小酒馆</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Medias</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/musics">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Musics</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Movies</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Books</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/galleries">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Galleries</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">达达前端小酒馆</div>
+        <div class="logo-desc">
+            
+            看过的书，听过的歌，去过的地方，遇到的故事，都分享给你，前端，PHP后端，全栈程序员，欢迎您来到小酒馆，品味人生酸甜苦辣，柴米油盐酱醋茶！
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;" target="_blank" rel="noopener">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			Medias
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>   
+				
+                  <a href="/musics " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Musics</span>
+                  </a>
+                </li>
+              
+                <li>   
+				
+                  <a href="/movies " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Movies</span>
+                  </a>
+                </li>
+              
+                <li>   
+				
+                  <a href="/books " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Books</span>
+                  </a>
+                </li>
+              
+                <li>   
+				
+                  <a href="/galleries " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Galleries</span>
+                  </a>
+                </li>
+               
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/huangguangda" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/huangguangda" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        教育系统APP(七)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9FAPP/">
+                                <span class="chip bg-color">教育系统APP</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9FAPP/" class="post-category">
+                                教育系统APP
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2018-04-27
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    5.7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    33 分
+                </div>
+                
+				
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+            
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <blockquote class="blockquote-center">用一切抱怨的时间去努力</blockquote>
+## 回顾上一期任务
+
+<img src="/images/33.jpg" style="width: 100%;height: 100%">
+
+<p>判断题数<br>点击完选项之后，底部的文本控件要变换刚刚点击的题目的题号。<br>注意：在里面用到adapter与Activity的信息回调，具体过程参考</p>
+<p>保存答题状态<br>当5道题都回答过一遍后，点击返回习题界面，习题下的文本标签要变成“已完成”。</p>
+<h2 id="教育系统APP-七-的发布-福利"><a href="#教育系统APP-七-的发布-福利" class="headerlink" title="教育系统APP(七)的发布-福利"></a>教育系统APP(七)的发布-福利</h2><a id="more"></a>
+
+<h2 id="解决上期任务"><a href="#解决上期任务" class="headerlink" title="解决上期任务"></a>解决上期任务</h2><p><img src="/images/29.png" alt="29"></p>
+<p><img src="/images/30.png" alt="30"></p>
+<p>在ExercisesDetailActivity.java中添加 </p>
+<pre><code>adapter.setOnItemListener(new ExercisesDetailListItemAdapter.OnItemListener() {
+            @Override
+            public void onItem(View view, int position) {
+                ff=ff+1;
+                tv_di.setText("第"+(position+1)+"题完成，共"+adapter.getItemCount()+"题");
+
+                if (ff==5){
+                    AnalysisUtils.saveExerciseStatus(ExercisesDetailActivity.this,id);
+                    Log.i("DD",id+"");
+                    setResult(RESULT_OK);
+                    //ff = 0;
+                }
+            }
+
+        });</code></pre><p>别担心，添加完一定有红，是因为我们还有几个方法没写。</p>
+<pre><code>package cn.edu.gdmec.android.boxuegu.activity;
+
+import android.app.Activity;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
+
+import cn.edu.gdmec.android.boxuegu.R;
+import cn.edu.gdmec.android.boxuegu.adapter.ExercisesDetailListItemAdapter;
+import cn.edu.gdmec.android.boxuegu.bean.ExercisesBean;
+import cn.edu.gdmec.android.boxuegu.utils.AnalysisUtils;
+
+public class ExercisesDetailActivity extends Activity {
+    private TextView tv_back;
+    private TextView tv_main_title;
+    private RelativeLayout title_bar;
+    private TextView tv_save;
+    private TextView tv_di;
+    private int id;
+    private String title;
+    private RecyclerView rv_list;
+
+    private List&lt;ExercisesBean&gt; ebl;
+    private ExercisesDetailListItemAdapter adapter;
+    //
+    public  int ff = 0;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_exercises_detail);
+        id = getIntent().getIntExtra("id",0);
+        title = getIntent().getStringExtra("title");
+        ebl = new ArrayList&lt;ExercisesBean&gt;();
+        initData();
+        initView();
+    }
+
+    private void initData() {
+        //从xml文件中获取习题数据
+        try {
+            InputStream is = getResources().getAssets().open("chapter" + id + ".xml");
+            ebl = AnalysisUtils.getExercisesInfos(is);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void initView() {
+        tv_save = findViewById(R.id.tv_save);
+        tv_back = findViewById(R.id.tv_back);
+        tv_main_title = findViewById(R.id.tv_main_title);
+        tv_main_title.setText(title);
+        title_bar = findViewById(R.id.title_bar);
+        title_bar.setBackgroundColor(Color.parseColor("#30B4FF"));
+        //
+        tv_di = findViewById(R.id.tv_di);
+        rv_list = findViewById(R.id.rv_list);
+        rv_list.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+
+        tv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ExercisesDetailActivity.this.finish();
+            }
+        });
+        adapter = new ExercisesDetailListItemAdapter(ExercisesDetailActivity.this,
+                new ExercisesDetailListItemAdapter.OnSelectListener() {
+                    @Override
+                    public void onSelectA(int position, ImageView iv_a, ImageView iv_b, ImageView iv_c, ImageView iv_d) {
+                        //判断如果答案不是1即A选项
+                        if (ebl.get(position).answer != 1) {
+                            ebl.get(position).select = 1;
+                        } else {
+                            ebl.get(position).select = 0;
+                        }
+                        switch (ebl.get(position).answer) {
+                            case 1:
+                                iv_a.setImageResource(R.drawable.exercises_right_icon);
+                                break;
+                            case 2:
+                                iv_a.setImageResource(R.drawable.exercises_error_icon);
+                                iv_b.setImageResource(R.drawable.exercises_right_icon);
+                                break;
+                            case 3:
+                                iv_a.setImageResource(R.drawable.exercises_error_icon);
+                                iv_c.setImageResource(R.drawable.exercises_right_icon);
+                                break;
+                            case 4:
+                                iv_a.setImageResource(R.drawable.exercises_error_icon);
+                                iv_d.setImageResource(R.drawable.exercises_right_icon);
+                                break;
+                        }
+                        AnalysisUtils.setABCDEnable(false, iv_a, iv_b, iv_c, iv_d);
+                    }
+
+                    @Override
+                    public void onSelectB(int position, ImageView iv_a, ImageView iv_b, ImageView iv_c, ImageView iv_d) {
+                        //判断如果答案不是2即B选项
+                        if (ebl.get(position).answer != 2) {
+                            ebl.get(position).select = 2;
+                        } else {
+                            ebl.get(position).select = 0;
+                        }
+                        switch (ebl.get(position).answer) {
+                            case 1:
+                                iv_a.setImageResource(R.drawable.exercises_right_icon);
+                                iv_b.setImageResource(R.drawable.exercises_error_icon);
+                                break;
+                            case 2:
+                                iv_b.setImageResource(R.drawable.exercises_right_icon);
+                                break;
+                            case 3:
+                                iv_b.setImageResource(R.drawable.exercises_error_icon);
+                                iv_c.setImageResource(R.drawable.exercises_right_icon);
+                                break;
+                            case 4:
+                                iv_b.setImageResource(R.drawable.exercises_error_icon);
+                                iv_d.setImageResource(R.drawable.exercises_right_icon);
+                                break;
+                        }
+                        AnalysisUtils.setABCDEnable(false, iv_a, iv_b, iv_c, iv_d);
+                    }
+
+                    @Override
+                    public void onSelectC(int position, ImageView iv_a, ImageView iv_b, ImageView iv_c, ImageView iv_d) {
+                        //判断如果答案不是3即C选项
+                        if (ebl.get(position).answer != 3) {
+                            ebl.get(position).select = 3;
+                        } else {
+                            ebl.get(position).select = 0;
+                        }
+                        switch (ebl.get(position).answer) {
+                            case 1:
+                                iv_a.setImageResource(R.drawable.exercises_right_icon);
+                                iv_c.setImageResource(R.drawable.exercises_error_icon);
+                                break;
+                            case 2:
+                                iv_b.setImageResource(R.drawable.exercises_right_icon);
+                                iv_c.setImageResource(R.drawable.exercises_error_icon);
+                                break;
+                            case 3:
+                                iv_c.setImageResource(R.drawable.exercises_right_icon);
+                                break;
+                            case 4:
+                                iv_c.setImageResource(R.drawable.exercises_error_icon);
+                                iv_d.setImageResource(R.drawable.exercises_right_icon);
+                                break;
+                        }
+                        AnalysisUtils.setABCDEnable(false, iv_a, iv_b, iv_c, iv_d);
+                    }
+
+                    @Override
+                    public void onSelectD(int position, ImageView iv_a, ImageView iv_b, ImageView iv_c, ImageView iv_d) {
+                        //判断如果答案不是4即D选项
+                        if (ebl.get(position).answer != 4) {
+                            ebl.get(position).select = 4;
+                        } else {
+                            ebl.get(position).select = 0;
+                        }
+                        switch (ebl.get(position).answer) {
+                            case 1:
+                                iv_a.setImageResource(R.drawable.exercises_right_icon);
+                                iv_d.setImageResource(R.drawable.exercises_error_icon);
+                                break;
+                            case 2:
+                                iv_d.setImageResource(R.drawable.exercises_error_icon);
+                                iv_b.setImageResource(R.drawable.exercises_right_icon);
+                                break;
+                            case 3:
+                                iv_d.setImageResource(R.drawable.exercises_error_icon);
+                                iv_c.setImageResource(R.drawable.exercises_right_icon);
+                                break;
+                            case 4:
+                                iv_d.setImageResource(R.drawable.exercises_right_icon);
+                                break;
+                        }
+                        AnalysisUtils.setABCDEnable(false, iv_a, iv_b, iv_c, iv_d);
+                    }
+                });
+        adapter.setData(ebl);
+        adapter.setOnItemListener(new ExercisesDetailListItemAdapter.OnItemListener() {
+            @Override
+            public void onItem(View view, int position) {
+                ff=ff+1;
+                tv_di.setText("第"+(position+1)+"题完成，共"+adapter.getItemCount()+"题");
+
+                if (ff==5){
+                    AnalysisUtils.saveExerciseStatus(ExercisesDetailActivity.this,id);
+                    Log.i("DD",id+"");
+                    setResult(RESULT_OK);
+                    //ff = 0;
+                }
+            }
+
+        });
+        rv_list.setAdapter(adapter);
+    }
+}</code></pre><p>ExercisesDetailListItemAdapter.java 中添加代码</p>
+<pre><code>package cn.edu.gdmec.android.boxuegu.adapter;
+
+import android.content.Context;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import cn.edu.gdmec.android.boxuegu.R;
+import cn.edu.gdmec.android.boxuegu.bean.ExercisesBean;
+import cn.edu.gdmec.android.boxuegu.utils.AnalysisUtils;
+
+public class ExercisesDetailListItemAdapter extends
+        RecyclerView.Adapter&lt;ExercisesDetailListItemAdapter.ViewHolder&gt; {
+    private List&lt;ExercisesBean&gt; objects = new ArrayList&lt;ExercisesBean&gt;();
+    private ArrayList&lt;String&gt; selectedPosition = new ArrayList&lt;String&gt;();
+    private Context context;
+    private LayoutInflater layoutInflater;
+    private OnSelectListener onSelectListener;
+    private OnItemListener onItemListener;
+
+    public ExercisesDetailListItemAdapter(Context context, OnSelectListener onSelectListener) {
+        this.context = context;
+        this.onSelectListener = onSelectListener;
+        this.layoutInflater = LayoutInflater.from(context);
+    }
+
+    @Override
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+        View view = inflater.inflate(R.layout.exercises_detail_list_item, parent,
+                false);
+        return new ViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(ViewHolder holder, int position) {
+        initializeViews(objects.get(position), holder, position);
+    }
+
+    public void setData(List&lt;ExercisesBean&gt; objects) {
+        this.objects = objects;
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+    @Override
+    public int getItemCount() {
+        return objects.size();
+    }
+
+    private void initializeViews(ExercisesBean object, final ViewHolder holder,
+                                 final int position) {
+        ExercisesBean bean = object;
+        if (bean != null) {
+            holder.tvSubject.setText(bean.subject);
+            holder.tvA.setText(bean.a);
+            holder.tvB.setText(bean.b);
+            holder.tvC.setText(bean.c);
+            holder.tvD.setText(bean.d);
+        }
+        if (!selectedPosition.contains("" + position)) {
+            holder.ivA.setImageResource(R.drawable.exercises_a);
+            holder.ivB.setImageResource(R.drawable.exercises_b);
+            holder.ivC.setImageResource(R.drawable.exercises_c);
+            holder.ivD.setImageResource(R.drawable.exercises_d);
+            AnalysisUtils.setABCDEnable(true, holder.ivA, holder.ivB, holder.ivC,
+                    holder.ivD);
+        } else {
+            AnalysisUtils.setABCDEnable(false, holder.ivA, holder.ivB, holder.ivC,
+                    holder.ivD);
+            switch (bean.select) {
+                case 0:
+                    if (bean.answer == 1) {
+                        holder.ivA.setImageResource(R.drawable.exercises_right_icon);
+                        holder.ivB.setImageResource(R.drawable.exercises_b);
+                        holder.ivC.setImageResource(R.drawable.exercises_c);
+                        holder.ivD.setImageResource(R.drawable.exercises_d);
+                    } else if (bean.answer == 2) {
+                        holder.ivA.setImageResource(R.drawable.exercises_a);
+                        holder.ivB.setImageResource(R.drawable.exercises_right_icon);
+                        holder.ivC.setImageResource(R.drawable.exercises_c);
+                        holder.ivD.setImageResource(R.drawable.exercises_d);
+                    } else if (bean.answer == 3) {
+                        holder.ivA.setImageResource(R.drawable.exercises_a);
+                        holder.ivB.setImageResource(R.drawable.exercises_b);
+                        holder.ivC.setImageResource(R.drawable.exercises_right_icon);
+                        holder.ivD.setImageResource(R.drawable.exercises_d);
+                    } else if (bean.answer == 4) {
+                        holder.ivA.setImageResource(R.drawable.exercises_a);
+                        holder.ivB.setImageResource(R.drawable.exercises_b);
+                        holder.ivC.setImageResource(R.drawable.exercises_c);
+                        holder.ivD.setImageResource(R.drawable.exercises_right_icon);
+                    }
+                    break;
+                case 1:
+                    holder.ivA.setImageResource(R.drawable.exercises_error_icon);
+                    if (bean.answer == 2) {
+                        holder.ivB.setImageResource(R.drawable.exercises_right_icon);
+                        holder.ivC.setImageResource(R.drawable.exercises_c);
+                        holder.ivD.setImageResource(R.drawable.exercises_d);
+                    } else if (bean.answer == 3) {
+                        holder.ivB.setImageResource(R.drawable.exercises_b);
+                        holder.ivC.setImageResource(R.drawable.exercises_right_icon);
+                        holder.ivD.setImageResource(R.drawable.exercises_d);
+                    } else if (bean.answer == 4) {
+                        holder.ivB.setImageResource(R.drawable.exercises_b);
+                        holder.ivC.setImageResource(R.drawable.exercises_c);
+                        holder.ivD.setImageResource(R.drawable.exercises_right_icon);
+                    }
+                    break;
+                case 2:
+                    holder.ivB.setImageResource(R.drawable.exercises_error_icon);
+                    if (bean.answer == 1) {
+                        holder.ivA.setImageResource(R.drawable.exercises_right_icon);
+                        holder.ivC.setImageResource(R.drawable.exercises_c);
+                        holder.ivD.setImageResource(R.drawable.exercises_d);
+                    } else if (bean.answer == 3) {
+                        holder.ivA.setImageResource(R.drawable.exercises_a);
+                        holder.ivC.setImageResource(R.drawable.exercises_right_icon);
+                        holder.ivD.setImageResource(R.drawable.exercises_d);
+                    } else if (bean.answer == 4) {
+                        holder.ivA.setImageResource(R.drawable.exercises_a);
+                        holder.ivC.setImageResource(R.drawable.exercises_c);
+                        holder.ivD.setImageResource(R.drawable.exercises_right_icon);
+                    }
+                    break;
+                case 3:
+                    holder.ivC.setImageResource(R.drawable.exercises_error_icon);
+                    if (bean.answer == 1) {
+                        holder.ivA.setImageResource(R.drawable.exercises_right_icon);
+                        holder.ivB.setImageResource(R.drawable.exercises_b);
+                        holder.ivD.setImageResource(R.drawable.exercises_d);
+                    } else if (bean.answer == 2) {
+                        holder.ivA.setImageResource(R.drawable.exercises_a);
+                        holder.ivB.setImageResource(R.drawable.exercises_right_icon);
+                        holder.ivD.setImageResource(R.drawable.exercises_d);
+                    } else if (bean.answer == 4) {
+                        holder.ivA.setImageResource(R.drawable.exercises_a);
+                        holder.ivB.setImageResource(R.drawable.exercises_b);
+                        holder.ivD.setImageResource(R.drawable.exercises_right_icon);
+                    }
+                    break;
+                case 4:
+                    holder.ivD.setImageResource(R.drawable.exercises_error_icon);
+                    if (bean.answer == 1) {
+                        holder.ivA.setImageResource(R.drawable.exercises_right_icon);
+                        holder.ivB.setImageResource(R.drawable.exercises_b);
+                        holder.ivC.setImageResource(R.drawable.exercises_c);
+                    } else if (bean.answer == 2) {
+                        holder.ivA.setImageResource(R.drawable.exercises_a);
+                        holder.ivB.setImageResource(R.drawable.exercises_right_icon);
+                        holder.ivC.setImageResource(R.drawable.exercises_c);
+                    } else if (bean.answer == 3) {
+                        holder.ivA.setImageResource(R.drawable.exercises_a);
+                        holder.ivB.setImageResource(R.drawable.exercises_b);
+                        holder.ivC.setImageResource(R.drawable.exercises_right_icon);
+                    }
+                    break;
+
+            }
+
+        }
+        holder.ivA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (onItemListener!=null){
+                    onItemListener.onItem(v,position);
+                }
+                if (selectedPosition.contains("" + position)) {
+                    selectedPosition.remove("" + position);
+                } else {
+                    selectedPosition.add(position + "");
+                }
+                onSelectListener.onSelectA(position, holder.ivA,
+                        holder.ivB, holder.ivC, holder.ivD);
+            }
+        });
+        holder.ivB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (onItemListener!=null){
+                    onItemListener.onItem(v,position);
+                }
+                if (selectedPosition.contains("" + position)) {
+                    selectedPosition.remove("" + position);
+                } else {
+                    selectedPosition.add(position + "");
+                }
+                onSelectListener.onSelectB(position, holder.ivA,
+                        holder.ivB, holder.ivC, holder.ivD);
+            }
+        });
+        holder.ivC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (onItemListener!=null){
+                    onItemListener.onItem(v,position);
+                }
+                if (selectedPosition.contains("" + position)) {
+                    selectedPosition.remove("" + position);
+                } else {
+                    selectedPosition.add(position + "");
+                }
+                onSelectListener.onSelectC(position, holder.ivA,
+                        holder.ivB, holder.ivC, holder.ivD);
+            }
+        });
+        holder.ivD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (onItemListener!=null){
+                    onItemListener.onItem(v,position);
+                }
+                if (selectedPosition.contains("" + position)) {
+                    selectedPosition.remove("" + position);
+                } else {
+                    selectedPosition.add(position + "");
+                }
+                onSelectListener.onSelectD(position, holder.ivA,
+                        holder.ivB, holder.ivC, holder.ivD);
+            }
+        });
+
+    }
+
+
+    protected class ViewHolder extends RecyclerView.ViewHolder {
+        private TextView tvSubject;
+        private ImageView ivA;
+        private TextView tvA;
+        private ImageView ivB;
+        private TextView tvB;
+        private ImageView ivC;
+        private TextView tvC;
+        private ImageView ivD;
+        private TextView tvD;
+
+        public ViewHolder(View view) {
+            super(view);
+            tvSubject = (TextView) view.findViewById(R.id.tv_subject);
+            ivA = (ImageView) view.findViewById(R.id.iv_a);
+            tvA = (TextView) view.findViewById(R.id.tv_a);
+            ivB = (ImageView) view.findViewById(R.id.iv_b);
+            tvB = (TextView) view.findViewById(R.id.tv_b);
+            ivC = (ImageView) view.findViewById(R.id.iv_c);
+            tvC = (TextView) view.findViewById(R.id.tv_c);
+            ivD = (ImageView) view.findViewById(R.id.iv_d);
+            tvD = (TextView) view.findViewById(R.id.tv_d);
+        }
+    }
+
+    public interface OnSelectListener {
+        void onSelectA(int position, ImageView iv_a,
+                       ImageView iv_b, ImageView iv_c,
+                       ImageView iv_d);
+
+        void onSelectB(int position, ImageView iv_a,
+                       ImageView iv_b, ImageView iv_c,
+                       ImageView iv_d);
+
+        void onSelectC(int position, ImageView iv_a,
+                       ImageView iv_b, ImageView iv_c,
+                       ImageView iv_d);
+
+        void onSelectD(int position, ImageView iv_a,
+                       ImageView iv_b, ImageView iv_c,
+                       ImageView iv_d);
+    }
+    public interface OnItemListener{
+        void onItem(View view,int position);
+    }
+    public void setOnItemListener(OnItemListener onItemListener){
+        this.onItemListener=onItemListener;
+    }
+}</code></pre><p>ExercisesListItemAdapter.java </p>
+<pre><code>package cn.edu.gdmec.android.boxuegu.adapter;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import cn.edu.gdmec.android.boxuegu.R;
+import cn.edu.gdmec.android.boxuegu.activity.ExercisesDetailActivity;
+import cn.edu.gdmec.android.boxuegu.bean.ExercisesBean;
+import cn.edu.gdmec.android.boxuegu.utils.AnalysisUtils;
+
+public class ExercisesListItemAdapter extends BaseAdapter {
+
+    private List&lt;ExercisesBean&gt; objects = new ArrayList&lt;ExercisesBean&gt;();
+    private Context context;
+    private LayoutInflater layoutInflater;
+
+    public ExercisesListItemAdapter(Context context){
+        this.context=context;
+        this.layoutInflater=LayoutInflater.from(context);
+    }
+    /**
+     * 设置数据更新界面
+     */
+    public void setData(List&lt;ExercisesBean&gt; objects){
+        this.objects = objects;
+        notifyDataSetChanged();
+    }
+    //
+    public void updateView(List&lt;ExercisesBean&gt; objects){
+        this.objects = objects;
+        this.notifyDataSetChanged();
+    }
+    @Override
+    public int getCount() {
+        return objects == null ? 0 : objects.size();
+    }
+
+    /**
+     * 根据position得到对应的Item的对象
+     */
+    @Override
+    public ExercisesBean getItem(int position) {
+        return objects.get(position);
+    }
+
+    /**
+     * 根据position得到对应Item的对象
+     */
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+    /**
+     * 得到相应position对应的Item视图，position是当前Item的位置
+     * convertView参数就是滚出屏幕的Item的View
+     * 第一次进入或滑动屏幕时候被调用
+     */
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        if (convertView == null) {
+            convertView = layoutInflater.inflate(R.layout.exercises_list_item, null);
+            convertView.setTag(new ViewHolder(convertView));
+        }
+        initializeViews((ExercisesBean) getItem(position), (ViewHolder) convertView.getTag(),
+                position, convertView);
+        return convertView;
+    }
+
+    private void initializeViews(ExercisesBean object, ViewHolder holder,
+                                 int position, View convertView) {
+        final ExercisesBean bean = getItem(position);
+        if (bean != null) {
+            holder.tvOrder.setText(position + 1 + "");
+            holder.tvTitle.setText(bean.title);
+            Log.i("readExercises",AnalysisUtils.readExerciseStatus(context,position+1)+"");
+            if (AnalysisUtils.readExerciseStatus(context,position+1)){
+                holder.tvContent.setText("已完成");
+            }else{
+                holder.tvContent.setText(bean.content);
+            }
+            holder.tvOrder.setBackgroundResource(bean.background);
+            convertView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (bean == null) {
+                        return;
+                    }
+                    //跳转到习题界面
+                    Intent intent = new Intent(context, ExercisesDetailActivity.class);
+                    intent.putExtra("id", bean.id);
+                    intent.putExtra("title", bean.title);
+                    ((Activity) context).startActivityForResult(intent, 000);
+                }
+            });
+        }
+    }
+
+    protected class ViewHolder {
+        private TextView tvOrder;
+        private TextView tvTitle;
+        private TextView tvContent;
+
+        public ViewHolder(View view) {
+            tvOrder = (TextView) view.findViewById(R.id.tv_order);
+            tvTitle = (TextView) view.findViewById(R.id.tv_title);
+            tvContent = (TextView) view.findViewById(R.id.tv_content);
+        }
+    }
+}</code></pre><p>AnalysisUtils.java 中添加代码</p>
+<pre><code>    public static boolean readExerciseStatus(Context context,int i){
+        SharedPreferences sharedPreferences = context.getSharedPreferences("loginInfo", Context.MODE_PRIVATE);
+        boolean isDone = sharedPreferences.getBoolean("isDone"+i, false);
+        return isDone;
+    }
+    public static void saveExerciseStatus(Context context,int i){
+        SharedPreferences sp = context.getSharedPreferences("loginInfo", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putBoolean("isDone"+i, true);
+        editor.commit();
+    }</code></pre><pre><code>package cn.edu.gdmec.android.boxuegu.utils;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.util.Xml;
+import android.widget.ImageView;
+
+import org.xmlpull.v1.XmlPullParser;
+
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
+
+import cn.edu.gdmec.android.boxuegu.bean.ExercisesBean;
+
+public class AnalysisUtils {
+    //读取用户名
+    public static String readLoginUserName(Context context){
+        SharedPreferences sharedPreferences = context.getSharedPreferences("loginInfo",Context.MODE_PRIVATE);
+        String userName=sharedPreferences.getString("loginUserName","");
+        return userName;
+    }
+
+    //读取登录状态
+    public static boolean readLoginStatus(Context context){
+        SharedPreferences sharedPreferences = context.getSharedPreferences("loginInfo",Context.MODE_PRIVATE);
+        boolean isLogin=sharedPreferences.getBoolean("isLogin",false);
+        return isLogin;
+    }
+
+    //清除登录状态
+    public static void cleanLoginStatus(Context context){
+        SharedPreferences sharedPreferences = context.getSharedPreferences("loginInfo",Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean("isLogin",false);
+        editor.putString("loginUserName","");
+        editor.commit();
+    }
+    public static boolean readExerciseStatus(Context context,int i){
+        SharedPreferences sharedPreferences = context.getSharedPreferences("loginInfo", Context.MODE_PRIVATE);
+        boolean isDone = sharedPreferences.getBoolean("isDone"+i, false);
+        return isDone;
+    }
+    public static void saveExerciseStatus(Context context,int i){
+        SharedPreferences sp = context.getSharedPreferences("loginInfo", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putBoolean("isDone"+i, true);
+        editor.commit();
+    }
+
+    public static List&lt;ExercisesBean&gt; getExercisesInfos(InputStream is) throws Exception{
+        XmlPullParser parser = Xml.newPullParser();
+        parser.setInput(is,"utf-8");
+        List&lt;ExercisesBean&gt; exercisesInfos=null;
+        ExercisesBean exercisesInfo=null;
+        int type = parser.getEventType();
+        while (type!=XmlPullParser.END_DOCUMENT){
+            switch (type){
+                case XmlPullParser.START_TAG:
+                    if ("infos".equals(parser.getName())){
+                        exercisesInfos=new ArrayList&lt;ExercisesBean&gt;();
+                    }else if ("exercises".equals(parser.getName())){
+                        exercisesInfo=new ExercisesBean();
+                        String ids=parser.getAttributeValue(0);
+                        exercisesInfo.subjectId = Integer.parseInt(ids);
+                    }else if ("subject".equals(parser.getName())){
+                        String subject=parser.nextText();
+                        exercisesInfo.subject = subject;
+                    }else if ("a".equals(parser.getName())){
+                        String a=parser.nextText();
+                        exercisesInfo.a = a;
+                    }else if ("b".equals(parser.getName())){
+                        String b=parser.nextText();
+                        exercisesInfo.b = b;
+                    }else if ("c".equals(parser.getName())){
+                        String c=parser.nextText();
+                        exercisesInfo.c = c;
+                    }else if ("d".equals(parser.getName())){
+                        String d=parser.nextText();
+                        exercisesInfo.d = d;
+                    }else if ("answer".equals(parser.getName())){
+                        String answer=parser.nextText();
+                        exercisesInfo.answer = Integer.parseInt(answer);
+                    }
+                    break;
+                case XmlPullParser.END_TAG:
+                    if ("exercises".equals(parser.getName())){
+                        exercisesInfos.add(exercisesInfo);
+                        exercisesInfo=null;
+                    }
+                    break;
+            }
+            type=parser.next();
+        }
+        return exercisesInfos;
+    }
+    public static void setABCDEnable(boolean value, ImageView iv_a, ImageView iv_b, ImageView iv_c, ImageView iv_d){
+        iv_a.setEnabled(value);
+        iv_b.setEnabled(value);
+        iv_c.setEnabled(value);
+        iv_d.setEnabled(value);
+    }
+}</code></pre><h2 id="Ok，大功告成！"><a href="#Ok，大功告成！" class="headerlink" title="Ok，大功告成！"></a>Ok，大功告成！</h2><h2 id="教育系统APP-七"><a href="#教育系统APP-七" class="headerlink" title="教育系统APP(七)"></a>教育系统APP(七)</h2><p>掌握课程模块的开发，实现用ViewPager完成广告轮播图的展示<br>掌握课程模块的开发，实现用RecyclerView完成课程列表的展示</p>
+<h2 id="项目实操"><a href="#项目实操" class="headerlink" title="项目实操"></a>项目实操</h2><p>课程界面-广告轮播图<br>课程界面-课程列表    </p>
+<h2 id="任务实施"><a href="#任务实施" class="headerlink" title="任务实施"></a>任务实施</h2><p>课程模块主要用于展示课程中的视频信息，当点击课程列表时会跳转到课程详情界面，在该界面中可以播放相应章节的视频。<br>同时为了方便用户查看已学习的视频，还在“我”的界面中添加了一个播放记录。本章将对课程界面进行详细讲解。</p>
+<h2 id="课程界面-广告轮播图"><a href="#课程界面-广告轮播图" class="headerlink" title="课程界面-广告轮播图"></a>课程界面-广告轮播图</h2><p>广告布局<br>导入图片文件 </p>
+<p><img src="/images/34.png" alt="34"></p>
+<p>广告轮播图底部有三个可变色的小圆点，我们先把小圆点的选择器给做了。<br>在drawable文件夹下分别创建indicator_on.xml和indecator_off.xml。</p>
+<p>indicator_on.xml </p>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval"&gt;
+    &lt;size android:height="6dp" android:width="6dp"&gt;&lt;/size&gt;
+    &lt;solid android:color="#00ABF8"&gt;&lt;/solid&gt;
+&lt;/shape&gt;</code></pre><p>indicator_off.xml </p>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval"&gt;
+    &lt;size android:height="6dp" android:width="6dp"&gt;&lt;/size&gt;
+    &lt;solid android:color="#737373"&gt;&lt;/solid&gt;
+&lt;/shape&gt;</code></pre><p>新建一个布局文件，命名为main_adbanner.xml </p>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_adBanner"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:background="#eeeeee"&gt;
+
+    &lt;android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/vp_advertBanner"
+        android:background="@drawable/default_img"
+        android:gravity="center"
+        android:layout_marginBottom="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"&gt;
+    &lt;/android.support.v4.view.ViewPager&gt;
+
+        &lt;LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"&gt;
+            &lt;View
+                android:background="@drawable/indicator_off"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/dots_1"
+                android:layout_width="5dp"
+                android:layout_height="5dp"/&gt;
+            &lt;View
+                android:background="@drawable/indicator_off"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/dots_2"
+                android:layout_width="5dp"
+                android:layout_height="5dp"/&gt;
+            &lt;View
+                android:background="@drawable/indicator_off"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/dots_3"
+                android:layout_width="5dp"
+                android:layout_height="5dp"/&gt;
+
+        &lt;/LinearLayout&gt;
+
+&lt;/RelativeLayout&gt;</code></pre><p>课程界面布局<br>写完了轮播图的布局，我们来完成课程页面的布局。<br>修改fragment_course.xml。<br>fragment_course.xml </p>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"&gt;
+
+    &lt;include layout="@layout/main_adbanner"&gt;&lt;/include&gt;
+
+    &lt;LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"&gt;
+
+        &lt;ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/course_intro_icon"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"/&gt;
+        &lt;TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:text="Android 基础教程1-10章视频"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/&gt;
+    &lt;/LinearLayout&gt;
+    &lt;View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#E4E4E4"&gt;
+    &lt;/View&gt;
+
+    &lt;android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="55dp"
+        android:scrollbars="none"&gt;
+        &lt;!--android:divider="@null"
+        android:id="@+id/lv_list"
+        android:dividerHeight="0dp"--&gt;
+    &lt;/android.support.v7.widget.RecyclerView&gt;
+&lt;/LinearLayout&gt;</code></pre><p>ViewPager<br>先给ViewPager写一个适配器：<br>在Adapter文件夹下新建一个java文件，命名为ADViewPagerAdapter.java。<br>ADViewPagerAdapter.java </p>
+<pre><code>package cn.edu.gdmec.android.boxuegu.adapter;
+
+import android.content.Context;
+import android.support.v4.view.PagerAdapter;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+
+import java.util.List;
+
+public class ADViewPagerAdapter extends PagerAdapter {
+    private Context context;
+    private List&lt;ImageView&gt; list;
+
+    public ADViewPagerAdapter(Context context, List&lt;ImageView&gt; list){
+        this.context = context;
+        this.list = list;
+    }
+    @Override
+    public int getCount() {
+        return list.size();
+    }
+
+    @Override
+    public boolean isViewFromObject(View view, Object object) {
+        return view == object;
+    }
+    @Override
+    public void destroyItem(ViewGroup container, int position, Object object){
+        container.removeView(list.get(position));
+    }
+    @Override
+    public Object instantiateItem(ViewGroup container, int position){
+        container.addView(list.get(position));
+        return list.get(position);
+    }
+}</code></pre><p>接下来是CourseFragment.java<br>CourseFragment.java </p>
+<pre><code>package cn.edu.gdmec.android.boxuegu.fragment;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
+import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
+import android.view.Display;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import cn.edu.gdmec.android.boxuegu.R;
+import cn.edu.gdmec.android.boxuegu.adapter.ADViewPagerAdapter;
+
+public class CourseFragment extends Fragment {
+    private ViewPager vp_advertBanner;
+    private View dots_1;
+    private View dots_2;
+    private View dots_3;
+    private RelativeLayout rl_adBanner;
+    private RecyclerView rv_list;
+
+    public static final int MSG_AD_SLID = 002;
+    private List&lt;ImageView&gt; viewList;
+    private ADViewPagerAdapter viewPagerAdapter;
+    private List&lt;View&gt; dots;
+    private int oldPoints=0;
+    private  Thread thread;
+
+
+    private Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what) {
+                case MSG_AD_SLID:
+                    if (viewPagerAdapter.getCount() &gt; 0) {
+                        if (vp_advertBanner.getCurrentItem() == viewList.size() - 1) {
+                            vp_advertBanner.setCurrentItem(0);
+                        } else {
+                            vp_advertBanner.setCurrentItem(vp_advertBanner.getCurrentItem() + 1);
+                        }
+
+                    }
+                    break;
+            }
+        }
+    };
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_course, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState){
+        super.onViewCreated(view, savedInstanceState);
+        initView(view);
+        setViewPager();
+    }
+
+    private void setViewPager(){
+        thread=new Thread(){
+            @Override
+            public void run(){
+                super.run();
+                while(true){
+                    try{
+                        sleep(1000);
+                    }catch (InterruptedException e){
+                        e.printStackTrace();
+                    }
+                    handler.sendEmptyMessage(MSG_AD_SLID);
+                }
+            }
+        };
+        thread.start();
+    }
+
+    private void initView(View view ){
+
+        vp_advertBanner=view.findViewById(R.id.vp_advertBanner);
+        rl_adBanner=view.findViewById(R.id.rl_adBanner);
+
+        viewList = new ArrayList&lt;&gt;();
+        ImageView imageView1=new ImageView(getActivity());
+        ImageView imageView2=new ImageView(getActivity());
+        ImageView imageView3=new ImageView(getActivity());
+
+        imageView1.setImageResource(R.drawable.banner_1);
+        imageView2.setImageResource(R.drawable.banner_2);
+        imageView3.setImageResource(R.drawable.banner_3);
+
+        viewList.add(imageView1);
+        viewList.add(imageView2);
+        viewList.add(imageView3);
+        viewPagerAdapter = new ADViewPagerAdapter(getActivity(),viewList);
+        vp_advertBanner.setAdapter(viewPagerAdapter);
+
+        //圆点
+        dots = new ArrayList&lt;View&gt;();
+        dots_1 = (View)view.findViewById(R.id.dots_1);
+        dots_2 = (View)view.findViewById(R.id.dots_2);
+        dots_3 = (View)view.findViewById(R.id.dots_3);
+
+        dots.add(dots_1);
+        dots.add(dots_2);
+        dots.add(dots_3);
+
+        //第一个圆点设为黑色
+        dots.get(0).setBackgroundResource(R.drawable.indicator_on);
+        vp_advertBanner.setOnPageChangeListener(new ViewPager.OnPageChangeListener(){
+
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                dots.get(oldPoints).setBackgroundResource(R.drawable.indicator_off);
+                dots.get(position).setBackgroundResource(R.drawable.indicator_on);
+                oldPoints=position;
+            }
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+        resetSize();
+    }
+
+    private void resetSize(){
+        int sw = getScreenWidth(getActivity());
+        int adLheight = sw / 2;
+        ViewGroup.LayoutParams adlp = rl_adBanner.getLayoutParams();
+        adlp.width = sw;
+        adlp.height = adLheight;
+        rl_adBanner.setLayoutParams(adlp);
+    }
+    private int getScreenWidth(Activity mContext){
+        DisplayMetrics metrics = new DisplayMetrics();
+        Display display = mContext.getWindowManager().getDefaultDisplay();
+        display.getMetrics(metrics);
+        return metrics.widthPixels;
+    }
+}</code></pre><h2 id="课程界面-课程列表"><a href="#课程界面-课程列表" class="headerlink" title="课程界面-课程列表"></a>课程界面-课程列表</h2><p>课程列表item<br>新建布局文件，命名为course_list_item.xml。</p>
+<p>course_list_item.xml </p>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"&gt;
+
+        &lt;RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="115dp"&gt;
+
+            &lt;ImageView
+                android:id="@+id/iv_course_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="4dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="4dp"
+                android:paddingTop="8dp"
+                android:src="@drawable/chapter_1_icon"/&gt;
+            &lt;TextView
+                android:id="@+id/tv_course_img_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="6dp"
+                android:background="#30000000"
+                android:paddingBottom="2dp"
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="2dp"
+                android:text="Android 基础入门"
+                android:textSize="12sp"
+                android:textColor="@android:color/white"/&gt;
+        &lt;/RelativeLayout&gt;
+        &lt;TextView
+            android:id="@+id/tv_course_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Android 基础视频第一章"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"/&gt;
+&lt;/LinearLayout&gt;</code></pre><h2 id="属性类"><a href="#属性类" class="headerlink" title="属性类"></a>属性类</h2><p>在Bean包下新建一个Java文件，命名为CourseBean.java</p>
+<p>CourseBean.java </p>
+<pre><code>public class CourseBean {
+    public int id;
+    public String imgTitle;
+    public String title;
+    public String intro;
+    public String icon;
+}</code></pre><h2 id="课程item的适配器"><a href="#课程item的适配器" class="headerlink" title="课程item的适配器"></a>课程item的适配器</h2><p>右键course_list_item.xml，用Genrate Code生成adapter文件，把它放进adapter包下。<br>CourseListItemAdapter.java </p>
+<pre><code>package cn.edu.gdmec.android.boxuegu.adapter;
+
+import android.content.Context;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import cn.edu.gdmec.android.boxuegu.R;
+import cn.edu.gdmec.android.boxuegu.bean.CourseBean;
+
+public class CourseListItemAdapter extends RecyclerView.Adapter&lt;CourseListItemAdapter.ViewHolder&gt; {
+
+    private List&lt;CourseBean&gt; objects = new ArrayList&lt;CourseBean&gt;();
+    private Context context;
+    private LayoutInflater layoutInflater;
+
+    public CourseListItemAdapter(Context context) {
+        this.context = context;
+        this.layoutInflater = LayoutInflater.from(context);
+    }
+
+    @Override
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+        View view=inflater.inflate(R.layout.course_list_item,parent,false);
+        return new ViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(ViewHolder holder, int position){
+        initializeViews(objects.get(position), holder);
+    }
+
+    public void setData(List&lt;CourseBean&gt; objects){
+        this.objects=objects;
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+    @Override
+    public int getItemCount() {
+        return objects.size();
+    }
+
+    private void initializeViews(CourseBean object, ViewHolder holder) {
+        if (object != null){
+            holder.tvCourseImgTitle.setText(object.imgTitle);
+            holder.tvCourseTitle.setText(object.title);
+            switch (object.id){
+                case 1:
+                    holder.ivCourseImg.setImageResource(R.drawable.chapter_1_icon);
+                    break;
+                case 2:
+                    holder.ivCourseImg.setImageResource(R.drawable.chapter_2_icon);
+                    break;
+                case 3:
+                    holder.ivCourseImg.setImageResource(R.drawable.chapter_3_icon);
+                    break;
+                case 4:
+                    holder.ivCourseImg.setImageResource(R.drawable.chapter_4_icon);
+                    break;
+                case 5:
+                    holder.ivCourseImg.setImageResource(R.drawable.chapter_5_icon);
+                    break;
+                case 6:
+                    holder.ivCourseImg.setImageResource(R.drawable.chapter_6_icon);
+                    break;
+                case 7:
+                    holder.ivCourseImg.setImageResource(R.drawable.chapter_7_icon);
+                    break;
+                case 8:
+                    holder.ivCourseImg.setImageResource(R.drawable.chapter_8_icon);
+                    break;
+                case 9:
+                    holder.ivCourseImg.setImageResource(R.drawable.chapter_9_icon);
+                    break;
+                case 10:
+                    holder.ivCourseImg.setImageResource(R.drawable.chapter_10_icon);
+                    break;
+            }
+        }
+    }
+
+    protected class ViewHolder extends RecyclerView.ViewHolder {
+        private ImageView ivCourseImg;
+        private TextView tvCourseImgTitle;
+        private TextView tvCourseTitle;
+
+        public ViewHolder(View view) {
+            super(view);
+            ivCourseImg = (ImageView) view.findViewById(R.id.iv_course_img);
+            tvCourseImgTitle = (TextView) view.findViewById(R.id.tv_course_img_title);
+            tvCourseTitle = (TextView) view.findViewById(R.id.tv_course_title);
+        }
+    }
+}</code></pre><h2 id="课程数据"><a href="#课程数据" class="headerlink" title="课程数据"></a>课程数据</h2><p>在assets文件夹中放入chaptertitle.xml，显然之前放过了<br>到Utils包下的AnalysisUtils.java中添加解析课程数据的方法。</p>
+<p>AnalysisUtils.java </p>
+<pre><code> public static List&lt;CourseBean&gt; getCourseInfos(InputStream is) throws  Exception{
+        XmlPullParser parser=Xml.newPullParser();
+        parser.setInput(is,"utf-8");
+        List&lt;CourseBean&gt; courseList=null;
+        CourseBean courseInfo=null;
+        int type=parser.getEventType();
+        while(type !=XmlPullParser.END_DOCUMENT){
+            switch (type){
+                case XmlPullParser.START_TAG:
+                    if ("infos".equals(parser.getName())){
+                        courseList=new ArrayList&lt;CourseBean&gt;();
+                    }else if("course".equals(parser.getName())){
+                        courseInfo=new CourseBean();
+                        String ids=parser.getAttributeValue(0);
+                        courseInfo.id=Integer.parseInt(ids);
+
+                    }
+                    else if("imgtitle".equals(parser.getName())){
+
+                        String imgtitle=parser.nextText();
+                        courseInfo.imgTitle=imgtitle;
+
+                    }
+                    else if("title".equals(parser.getName())){
+                        String title=parser.nextText();
+                        courseInfo.title=title;
+
+                    }
+                    else if("intro".equals(parser.getName())){
+                        String intro=parser.nextText();
+                        courseInfo.intro=intro;
+
+                    }
+                    break;
+                case XmlPullParser.END_TAG:
+                    if ("course".equals(parser.getName())){
+                        courseList.add(courseInfo);
+                        courseInfo=null;
+                    }
+                    break;
+            }
+            type=parser.next();
+
+        }
+        return courseList;
+    }</code></pre><p>课程列表逻辑代码<br>回到CourseFragment.java,把获取数据和recyclerView的逻辑代码补上</p>
+<p>CourseFragment.java </p>
+<pre><code>package cn.edu.gdmec.android.boxuegu.fragment;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
+import android.view.Display;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
+
+import cn.edu.gdmec.android.boxuegu.R;
+import cn.edu.gdmec.android.boxuegu.adapter.ADViewPagerAdapter;
+import cn.edu.gdmec.android.boxuegu.adapter.CourseListItemAdapter;
+import cn.edu.gdmec.android.boxuegu.bean.CourseBean;
+import cn.edu.gdmec.android.boxuegu.utils.AnalysisUtils;
+
+public class CourseFragment extends Fragment {
+    private ViewPager vp_advertBanner;
+    private View dots_1;
+    private View dots_2;
+    private View dots_3;
+    private RelativeLayout rl_adBanner;
+    private RecyclerView rv_list;
+
+    public static final int MSG_AD_SLID = 002;
+    private List&lt;ImageView&gt; viewList;
+    private ADViewPagerAdapter viewPagerAdapter;
+    private List&lt;View&gt; dots;
+    private int oldPoints=0;
+    private  Thread thread;
+    private List&lt;CourseBean&gt; rList;
+    private CourseListItemAdapter adapter;
+
+    private Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what) {
+                case MSG_AD_SLID:
+                    if (viewPagerAdapter.getCount() &gt; 0) {
+                        if (vp_advertBanner.getCurrentItem() == viewList.size() - 1) {
+                            vp_advertBanner.setCurrentItem(0);
+                        } else {
+                            vp_advertBanner.setCurrentItem(vp_advertBanner.getCurrentItem() + 1);
+                        }
+
+                    }
+                    break;
+            }
+        }
+    };
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_course, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState){
+        super.onViewCreated(view, savedInstanceState);
+        getCourseData();
+        initView(view);
+        setViewPager();
+    }
+
+    private void getCourseData(){
+        try {
+            InputStream is = getActivity().getResources().getAssets().open("chaptertitle.xml");
+            rList = AnalysisUtils.getCourseInfos(is);
+        }catch (IOException e){
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void setViewPager(){
+        thread=new Thread(){
+            @Override
+            public void run(){
+                super.run();
+                while(true){
+                    try{
+                        sleep(1000);
+                    }catch (InterruptedException e){
+                        e.printStackTrace();
+                    }
+                    handler.sendEmptyMessage(MSG_AD_SLID);
+                }
+            }
+        };
+        thread.start();
+    }
+
+    private void initView(View view ){
+        rv_list=view.findViewById(R.id.rv_list);
+        adapter=new CourseListItemAdapter(getActivity());
+        adapter.setData(rList);
+        rv_list.setLayoutManager(new GridLayoutManager(getActivity(),3));
+        rv_list.setAdapter(adapter);
+
+        vp_advertBanner=view.findViewById(R.id.vp_advertBanner);
+        rl_adBanner=view.findViewById(R.id.rl_adBanner);
+
+        viewList = new ArrayList&lt;&gt;();
+        ImageView imageView1=new ImageView(getActivity());
+        ImageView imageView2=new ImageView(getActivity());
+        ImageView imageView3=new ImageView(getActivity());
+
+        imageView1.setImageResource(R.drawable.banner_1);
+        imageView2.setImageResource(R.drawable.banner_2);
+        imageView3.setImageResource(R.drawable.banner_3);
+
+        viewList.add(imageView1);
+        viewList.add(imageView2);
+        viewList.add(imageView3);
+        viewPagerAdapter = new ADViewPagerAdapter(getActivity(),viewList);
+        vp_advertBanner.setAdapter(viewPagerAdapter);
+
+        //圆点
+        dots = new ArrayList&lt;View&gt;();
+        dots_1 = (View)view.findViewById(R.id.dots_1);
+        dots_2 = (View)view.findViewById(R.id.dots_2);
+        dots_3 = (View)view.findViewById(R.id.dots_3);
+
+        dots.add(dots_1);
+        dots.add(dots_2);
+        dots.add(dots_3);
+
+        //第一个圆点设为黑色
+        dots.get(0).setBackgroundResource(R.drawable.indicator_on);
+        vp_advertBanner.setOnPageChangeListener(new ViewPager.OnPageChangeListener(){
+
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                dots.get(oldPoints).setBackgroundResource(R.drawable.indicator_off);
+                dots.get(position).setBackgroundResource(R.drawable.indicator_on);
+                oldPoints=position;
+            }
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+        resetSize();
+    }
+
+    private void resetSize(){
+        int sw = getScreenWidth(getActivity());
+        int adLheight = sw / 2;
+        ViewGroup.LayoutParams adlp = rl_adBanner.getLayoutParams();
+        adlp.width = sw;
+        adlp.height = adLheight;
+        rl_adBanner.setLayoutParams(adlp);
+    }
+    private int getScreenWidth(Activity mContext){
+        DisplayMetrics metrics = new DisplayMetrics();
+        Display display = mContext.getWindowManager().getDefaultDisplay();
+        display.getMetrics(metrics);
+        return metrics.widthPixels;
+    }
+}</code></pre><p>补充完成后，大功告成！</p>
+<h2 id="任务实施-福利"><a href="#任务实施-福利" class="headerlink" title="任务实施-福利"></a>任务实施-福利</h2><p>把课程列表显示从2列变为3列</p>
+<p>由于任务过简单，就告诉你们~<br>CourseFragment.java，其实你们会发现运行完就变3列了，那么是哪里改的呢？</p>
+<pre><code>rv_list=view.findViewById(R.id.rv_list);
+        adapter=new CourseListItemAdapter(getActivity());
+        adapter.setData(rList);
+        rv_list.setLayoutManager(new GridLayoutManager(getActivity(),3));
+        rv_list.setAdapter(adapter);</code></pre><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>大家是不是觉得之前的任务有点难呢？就给任务福利了，岁月静好~</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://huangguangda.cn" rel="external nofollow noreferrer">Jeskson</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://huangguangda.cn/2018/04/27/1/">https://huangguangda.cn/2018/04/27/1/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://huangguangda.cn" target="_blank">Jeskson</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9FAPP/">
+                                    <span class="chip bg-color">教育系统APP</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '63f0a30af9ea69df5360',
+        clientSecret: '0fb0f4090d4958332a48ba4645023be529300b46',
+        repo: 'huangguangda.github.io',
+        owner: 'Jeskson',
+        admin: ["Jeskson"],
+        id: '2018-04-27T16-15-53',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2018/04/28/1/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="教育系统APP(八)">
+                        
+                        <span class="card-title">教育系统APP(八)</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            用一切抱怨的时间去努力
+
+
+
+
+项目“课程”的模块2目录
+学习目标1.1 掌握课程模块的开发，实现用VideoView完成视频的播放1.2 掌握课程模块的开发，实现用JSONObject完成Json数据的解析1.3 掌握课程模块的开发，实现
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2018-04-28
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9FAPP/" class="post-category">
+                                    教育系统APP
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9FAPP/">
+                        <span class="chip bg-color">教育系统APP</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2018/04/26/1/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="教育系统APP(六)">
+                        
+                        <span class="card-title">教育系统APP(六)</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            用一切抱怨的时间去努力
+## 回顾上一期任务
+
+
+任务实施个人资料加上QQ号属性在个人资料下添加一个“QQ号”属性，初始状态文字显示“未添加”，点击进入修改页面，输入框的键盘类型只能为数字。（提示：editText.setInputType
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2018-04-26
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9FAPP/" class="post-category">
+                                    教育系统APP
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9FAPP/">
+                        <span class="chip bg-color">教育系统APP</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 达达前端小酒馆<br />'
+            + '文章作者: Jeskson<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+    
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">年份</span>
+            <a href="https://huangguangda.cn" target="_blank">Jeskson</a>
+
+            <br>
+            
+            
+
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    window.setTimeout("siteTime()", 1000);
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2015";
+                    var startMonth = "6";
+                    var startDate = "28";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/huangguangda" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2397923107@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2397923107" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2397923107" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+    <a href="https://weibo.com/u/5700875443" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/u/5700875443" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
+
+
+
+    <a href="https://www.zhihu.com/people/dashucoding/activities" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/dashucoding/activities" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+<script>
+    $(document).ready(function () {
+
+        var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+        var pvcountOffset = 80000;  // 初始化首次数据
+        var uvcountOffset = 20000;
+
+        function fixCount() {
+            if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
+                clearInterval(int);
+            }
+            if ($("#busuanzi_container_site_pv").css("display") != "none") {
+                $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
+                clearInterval(int); // 停止检测
+            }
+        }
+    });
+</script>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+    <script type="text/javascript">
+    var OriginTitile = document.title,
+        st;
+    document.addEventListener("visibilitychange", function () {
+        document.hidden ? (document.title = "看不见我🙈~看不见我🙈~", clearTimeout(st)) : (document.title =
+            "(๑•̀ㅂ•́) ✧被发现了～", st = setTimeout(function () {
+                document.title = OriginTitile
+            }, 3e3))
+    })
+    </script>
+
+    <!-- JesksonWeather -->
+    <script type="text/javascript">
+    WIDGET = {FID: 'IQ9YeEehN9'}
+    </script>
+    <script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+
+</body>
+
+</html>
